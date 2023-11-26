@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital@0;1&display=swap');
+
+* {
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+.cont-body {
+    height:100vh;
+    display:flex;
+    /* flex-direction: column; */
+    justify-content:center;
+    align-items: center;
+}
+
+.container {
+    width:100%;
+    max-width:800px;
+    height:80vh;
+    background-color: rgb(226, 223, 223);
+    margin:auto;
+    display:flex;
+    flex-direction: column;
+    /* justify-content:center; */
+    align-items: center;
+    justify-content:center;
+}
+
+.head-title {
+    padding:10px;
+}
+
+.chat-cont{
+    width:80%;
+    height:60vh;
+    /* background-color: rgb(92, 92, 92); */
+    overflow-y:hidden;
+    display: flex;
+    flex-direction: column;
+    /* align-items:center; */
+    border-radius:10px;
+}
+
+.question-cont {
+    box-shadow: 0 0 3px rgb(171, 170, 170);
+    padding:20px;
+
+}
+
+.question {
+    font-size: 20px;
+}
+
+.response-cont {
+    width:100%;
+    max-height:100%;
+    background-color: aliceblue;
+    border-radius:5px;
+    box-shadow: 0 0 3px rgb(223, 222, 222);
+    color:black;
+    font-size:20px;
+    margin-top:20px;
+    padding:10px;
+    overflow-y:scroll;
+}
+
+.response-cont::-webkit-scrollbar {
+    display: none;
+}
+
+.input-cont{
+    margin:10px;
+    width:80%;
+}
+
+form {
+    width:100%;
+}
+
+#inpt{
+    width:87%;
+    padding:20px;
+    border:none;
+    border-radius:15px;
+}
+
+.sub-btn {
+    /* width:19%; */
+    padding:20px;
+    border:none;
+    border-radius:15px;
+    background-color: rgb(53, 172, 235);
+    color:white;
+    font-size:15px;
+    cursor: pointer;
+}
+
+.sub-btn:hover {
+    background-color: rgb(38, 174, 247);
+    color:white;
+    font-size:15px;
+    cursor: pointer;
+}
+
+@media screen and (max-width:760px) {
+    .container {
+        width:100%;
+        max-width:500px;
+        height:60vh;
+        margin:20px;
+    }
+    form {
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items: center;
+    }
+    #inpt{
+        width:100%;
+    }
+    .sub-btn {
+       width:150px;
+       display: flex;
+       /* flex-direction: column; */
+       justify-content: center;
+       align-items: center;
+       margin-top:10px;
+    }
+}
+
+

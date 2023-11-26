@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatBot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+</head>
+
+<body>
+    <div class="cont-body">
+        <div class="container">
+            <div class="title">
+                <h2 class="head-title">Chat With Your Galaxy AI</h2>
+            </div>
+            <div class="chat-cont">
+                {% if user_input %}
+                <div class="question-cont">
+                    <p class="question">You Asked: {{user_input}}</p>
+                </div>
+                {% endif %}
+                <div class="response-cont">
+                    {{answer}}
+                </div>
+                <!-- <div class="question-cont">
+                    <p class="question">You Asked: {{user_input}}</p>
+                </div>
+                <div class="response-cont">
+                    {{answer}}
+                </div> -->
+            </div>
+            <div class="input-cont">
+                <form id="chat-form" action="{{url_for('get_answer')}}" method="post">
+                    <input type="text" name="inpt" id="inpt" placeholder="Talk to Galaxy">
+                    <button type="submit" class="sub-btn">Send</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
